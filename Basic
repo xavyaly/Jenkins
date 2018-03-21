@@ -1,0 +1,114 @@
+Jenkins Basic Overview:
+
+Monitoring -> Polling the source code for any change -> Plugin
+Checkout the code
+Build
+Unit testing / Code Coverage
+Notification
+
+Jenkins is an Orchestration Tool or Build Tool
+Project in Jenkins
+Jobs in Jenkins
+Jenkins have Open Source and Enterprise Version (Hosted in Cloud, Need Licence)
+
+Security => Role Based Access in Jenkins:
+Default Read Access: Reader Role
+Build Role: Builder Role -> Application Team
+Configure Role: Configurer Role -> DevOps
+Admin Access: Admin
+
+Master have all the configuration of the Job
+Slave is the actual executor of the Job
+
+Build History
+One Master and Multiple Slave we can configure
+
+Jenkins Lab Server for testing:
+
+New Job: 
+Click on New Job-> Name -> Freestyle Project -> Ok 
+
+Jenkins Workspace:
+Source Code
+Compiled Artifact
+
+Important Plugins:
+Changes; Workspace; Build with Parameters; Delete Project;
+Configure; Metadata; Rebuild Last; Scheduled Build; Move
+Failure Cause Management; Failure Scan Options; Job Config History
+Purge Build History; Test Results Analyzer
+
+Important Plugins:
+New Item; People; Build History; Project Relationship; 
+Check File Fingerprint; Selenium Grid; Manage Jenkins; 
+Metadata Configuration; Metadata Search; Failure Cause Management;
+My Views; Job Config History; Job Import Plugin; Restart Safety; 
+JQS Monitoring; Plugin Usage; Global Configuration; Scriptor; 
+Credentials; BI TADP Knowledge Management Site; 
+Middleware Information Repository (MIRA); Jenkins Monitoring;
+IBM Urban Code Deploy
+
+Inside Jenkins Job:
+BUILD_TIME_STAMP
+Discard old builds
+	Strategy: Log Rotation
+		Days to keep build:
+		Max: 20
+Meta Data:
+Sidebar links
+Project is parameterized
+	Boolean 
+	Choice
+Disable this project
+Execute concurrent builds:
+	JDK: Select
+Restrict:
+	Label: Any
+SCM:
+	Git/ SVN
+	Generic credentials
+	Rep Depth:
+		Infinity: go till
+		Empty: only deploy folder
+		file: only the file
+		Immediate: Immdidate
+		As-it-is: as it is
+	Ignore Externals: call another svn url (Mostly we does)
+	Checkout Strategy: svn update
+Use custom workspace: Limit the character
+	Directory: 
+	Display name:
+Build Triggers:
+	Build Periodically: 
+		Schedule: Cron Job (M H D M D), it will always trigger
+	Poll SCM: 
+		Schedule: Same (H/15 * * * * ), trigger only if changes occurred
+Build Env:
+	Delete the workspace
+	Add time stamp
+	Set Env var
+Build: 
+	Console script, Run the script with the compilation
+	Ex:
+		Invoke Ant:
+			Ant Version: ant-…
+			Targets: clean prepare compile (set of instruction to perform)
+			Build File: always relative file, dependent on checkout location
+			Properties: Hudson.home=D://Slave//Jenkins
+			Java Options: 
+Post Build Action:
+	Used to publish
+	
+	1. Publishing unit testing/ code coverage results
+	2. Uploading/ deploying the pkg to UCD (deployment tool)
+	3. Email notifications 
+	
+	
+
+Steps in Jenkins Job:
+Basic Configuration
+SVN Checkout
+Create/update build environment
+Build/unit test
+Package creation
+Upload pkg /deploy the pkg to UCD
