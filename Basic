@@ -94,21 +94,57 @@ Build:
 			Ant Version: ant-…
 			Targets: clean prepare compile (set of instruction to perform)
 			Build File: always relative file, dependent on checkout location
-			Properties: Hudson.home=D://Slave//Jenkins
+			Properties: 
+				Hudson_home=D://Slave//Jenkins
+				Workspace=$WORKSPACE
+				buildNumber=$BUILD_NUMBER
+				Env.HuDSON_HOME=D:\\slave\\jenkins
+				Projectname=$JOB_NAME
+				JAVA_HOME=$JAVA_HOME
+				Svn.revision=$SVN_REVISION
+				addDir=$WORKSPACE\\deploy\\..
 			Java Options: 
 Post Build Action:
 	Used to publish
-	
+	Publish JUnit test result report
+		Test: Location of xml
+		Health: 1.0
+
+Steps need to perform in Jenkins:
 	1. Publishing unit testing/ code coverage results
 	2. Uploading/ deploying the pkg to UCD (deployment tool)
 	3. Email notifications 
 	
-	
-
 Steps in Jenkins Job:
-Basic Configuration
-SVN Checkout
-Create/update build environment
-Build/unit test
-Package creation
-Upload pkg /deploy the pkg to UCD
+	Basic Configuration
+	SVN Checkout
+	Create/update build environment
+	Build/unit test
+	Package creation
+	Upload pkg /deploy the pkg to UCD
+
+Plugin used:
+Post build actions:
+	Publish artifacts to TADP IBM Urbancode deploy server
+		Version:Sept2017_REV$(SVN_REVISION)_B$(BUILD_NUMBER)
+	
+UCD: Urban Code Deployment
+
+Application:
+Component: Basic deployable unit
+Comp process: steps for deploying ur component
+Application process: steps for deploying an app
+Environment: DI, ST,…
+Resources: Servers
+Version: Package
+
+		
+Ant Scripting: 
+
+Ant Core Concepts:
+Projects
+Properties
+Targets
+Tasks
+Build Scripts
+
