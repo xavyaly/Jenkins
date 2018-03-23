@@ -1,44 +1,4 @@
-Pipeline:
 
-Manage Plugin -> Installed Pipeline Plugin 
-
-First Square:
-Delivery definition file -> SVN Commit -> Source repository
-
-Second Square:
-
-Jenkins File:
-
-Build Process:
-	1. Svn url
-	2. Build
-	3. Unit test
-	4. Pulish
-	5. Deploy
 	
-Third Square: => Jenkins Seed Job
-Template repository -> 
-	1. its own jenkinsfile
-		a. Read the ddf
-		b. Selects the jenkins template file (ant/mave/.net)
-		c. Create the jenkins file for our own repository
-		d. Commit the create jenkins file into our required repository
-	2. One jenkins tempalte file
-		a. Ant tempalte
-		b. .net template
-		c. Maven template
-
-DDF + Jenkins file template = App specific jenkins file
-
-VVImportant:
-Pipeline is the Plugin used to create a Pipeline Job
-	
-Stage View In Pipeline Job:
-	1. Checkout
-	2. Read Definition
-	3. Validate DDF
-
-Create Pipeline Job
-
 
 
