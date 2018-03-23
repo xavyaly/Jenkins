@@ -1,1 +1,40 @@
-y
+Maven:
+
+	1. Read POM.xml
+	2. Downloads dependencies into local repo
+	3. Executes life cycles build phases and/or goals
+	4. Execute Plugins
+
+All executed according to selected build profile
+
+Maven Reads pom.xml -> Maven Local Repository
+	1. Build Life Cycles
+		a. Phases
+			i. Goals
+	2. Dependencies (JARs)
+	3. Build Plugins
+	4. Build Profiles
+		
+Pom.xml:
+Describe the code which you compile and the way
+
+Note:
+We are responsible to create Build.xml and we take 
+Order of compilation from App Dev Team
+
+Build:
+Invoke top-level Maven targets:
+Maven Version: Linux-maven-3.3.3
+Goals: -U clean install pmd:pmd pmd:cpd findbugs:findbugs
+POM: epm-build/pom.xml
+Properties:
+	Maven.test.skip=true
+	Maven.test.failure.ignore=true
+JVM Options: -Xmx512M
+Inject build variables: check
+Use private maven repository:
+Settings file:
+	Settings file in filesystem
+		FilePath: /home/biciapps1/.m2/settings.xml
+	Global Settings file: Global settings file on filesystem
+		File path: /home/biciapps1/.m2/settings.xml
