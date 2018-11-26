@@ -28,6 +28,7 @@ $ tar xzvf apache-maven-3.6.0-bin.tar.gz
 $ echo $JAVA_HOME	# /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
 $ export PATH=/opt/apache-maven-3.6.0/bin:$PATH	# Adding Maven Path
 $ mvn -v OR mvn -version	# Apache Maven 3.6.0
+$ Whereis mvn	# Path where Maven Installed
 
 Troubleshoot Part:
 $ nano ~/.bash_profile		# Edit the file
