@@ -71,6 +71,12 @@ In CLI:
 	Cross verify in your GitHub 	// New branch should reflect
 	Cross verify in Jenkins Job	// New branch should reflect
 
+
+In GIT:
+	Go to Specific repo
+	Click on Settings not under My Account
+	Click on Webhooks
+		// http://localhost:8080/github-webhook/
 Troubleshoot:
 	New branch were not reflecting so we have created a new Job and 
 	Populate all the required parameters 
