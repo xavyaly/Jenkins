@@ -1,0 +1,49 @@
+$	: user
+#	: root
+// 	: comment
+
+
+KIND OF JENKINS JOBS:
+	Manual Jobs		// Manual Triggered 
+	Self Service Jobs	
+	Automatic Jobs	// cron jobs
+	Nightly Build Jobs		// Execute it during night time
+	Pipeline Jobs			// Based on Groovy Script	
+
+Read the below Article regarding crontab:
+https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/
+
+Naming Convention:		// <x>-<y>-<z>-<r>
+Sample Jobs in Jenkins
+Wipeout current workspace
+Create a new Job from an existing Job	
+Create a folder and segregate the existing Jobs
+Manual Triggered the Jenkins Jobs
+Create a Global Credentials to utilise from any where:
+	ssh-keygen
+Where Jenkins keep build file ?	// cd ~/.jenkins
+Build Tools:
+	maven
+	ant
+	gradle
+Default path of Jenkins		// /var/lib/jenkins
+Always performable operation in Jenkins		// by jenkins users, sudo su jenkins
+Install the Plugins in Jenkins	// Manage Jenkins
+Uninstall the Plugins in Jenkins	// 
+Important Plugins:
+	GitHub
+	Version Number
+	Nexus Plugin
+	Green Balls
+	Maven Integration 
+	Digital Ocean
+	etc…
+Install the Plugins without restart	//
+Overview of DownStream and UpStream Jenkins Jobs
+Introduction of Manage Jenkins
+Matrix Permissions in Jenkins
+Permissions to specific DL or Person
+	DevOps-01	// 10 peoples
+	DevOps-02	// 15 peoples
+	<Any-Specific-Names>	// Individual Person
+
