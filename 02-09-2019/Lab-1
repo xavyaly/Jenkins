@@ -1,0 +1,42 @@
+How to Fork ?
+
+In general:
+$ git clone <https-url>
+$ git status
+$ git add .
+$ git commit -m “<useful-comment>”
+$ git branch
+$ git push	// Error
+remote: Permission to wakaleo/game-of-life.git denied to xavyaly.
+fatal: unable to access 'https://github.com/wakaleo/game-of-life.git/': The requested URL returned error: 403
+
+To avoid Error we used Fork Concept:
+// Click on Fork
+$ git clone <https-url>
+$ git status
+$ git add .
+$ git commit -m “<useful-comment>”
+$ git branch
+$ git push	// Error
+// It will upload your current local repo into remote
+
+Manual Execution of Maven Project:
+$ cd game-of-life/gameoflife-build
+$ ls -l
+// src and pom.xml should be present
+$ mvn compile package
+// target folder should be created automatically
+$ cd target
+$ ls -l
+// Cross verify the “gameoflife-build-1.0-SNAPSHOT.jar” jar file has been created successfully
+
+Create a Maven Jenkins Job:
+// Install “Maven Integration” Plugin
+// Create a maven project
+// Add the git URL and Password
+// Specify the branch “*/master”
+// Specify: Root POM => gameoflife-build/pom.xml
+// Specify: Goals and options => compile package
+
+Google it about maven commands:
+https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html

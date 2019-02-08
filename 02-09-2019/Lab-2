@@ -1,0 +1,46 @@
+Automatic Execution of Jenkins jobs:
+	Build Triggered	: Execute it as per the cron job
+	Poll SCM			: Execute as per the changes but we need to define the cron job as well
+	Web Hook		: 
+
+Sample Project in GitHub:
+
+In GitHub:
+	Settings -> Developer Settings -> Personal Access Token -> Generate New Token -> Give Password
+	Token Description => <any-token-name> OR IntegrationWithGitHub
+	Select the checkbox for:
+		repo
+		admin:repo_hook
+ 		admin:org_hook
+	Click on Generate Token
+		Copy the token else it will disappear
+		8b183c6eb4e2936bdc4a679597c811ac1efedf24
+
+In Jenkins: 
+	Click on Credentials
+	Click on Jenkins
+	Click on “Global Credentials”
+	Click on Add Credentials
+	kind:
+		Username with password:
+			Username: IntegrationWithGitHub
+			Password: 8b183c6eb4e2936bdc4a679597c811ac1efedf24
+			ID: jenkins-secret
+		Click on OK
+	kind:
+		Secret text:
+			Secret: 8b183c6eb4e2936bdc4a679597c811ac1efedf24
+			ID: jenkins-token
+
+In Jenkins:
+	Manage jenkins 
+	Configure Systems
+	GitHub
+	GitHub Server:
+		Name: <token-name>	OR IntegrationWithGitHub
+		API URL: Default
+		Credentials: <select the specified token>
+		// Test the connection
+		Manage hooks: Select the checkbox
+	Click on Save
+
