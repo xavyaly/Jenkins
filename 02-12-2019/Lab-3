@@ -1,0 +1,10 @@
+node() {
+
+	stage(‘Build & Package’) {
+	    //withEnv([‘VERSION_NUM=‘+VERSION_NUM]) {
+	        sh ‘mvn compile install -U -f gameoflife-build/pom.xml’
+    	// some block
+	    //}
+    }
+}
+
