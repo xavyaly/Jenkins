@@ -1,0 +1,60 @@
+$: user
+#: root
+//: comments
+
+KINDS OF JENKINS JOBS:
+	Manual Jobs				// Manual triggered by us or developer
+	Self Service Jobs
+	Automatic Jobs			// cron jobs, defined the time stamp and it will execute
+	Nightly Build Jobs			// Executes it during night time, Build triggered
+	Poll SCM					
+
+IMPORTANT:
+	Naming Convention In Jenkins Jobs			// <X>-<Y>-<Z>-<R>
+	Sample Jobs in Jenkins
+	Wipeout Current Workspace				// Prefer CLI, In UI also worked
+	Create a New Job in Jenkins
+	Create a new Job from an existing Job
+	How to clean the existing Jenkins Jobs
+	Disable an existing Jenkins Jobs
+	How to create a Folder in Jenkins
+	Manual triggered to Jenkins Jobs
+	How to create a Global Credentials 			// To utilise from any where
+	Where Jenkins keeps the build 				// 
+	Default path of Jenkins
+	Installation and Un-Installation of Plugins	// Important
+	Installation and Un-Installation of Plugins without restart	// 
+	Important Plugins in Jenkins
+	Overview of UpStream/Downstream of Jobs
+	Manage Jenkins							// Important
+	Matrix Permission							
+	Permission to Specific DL or Person			// 
+		DevOps-01	// 10 People
+		DevOps-02	// 20 People
+	Fork a Project
+	Create a Normal Jobs
+	Create a Maven Jobs
+	Maven Execution of Maven Project
+	Jenkins Parameters Jobs
+	// In shell how to run a script by passing multiple run time parameter	
+	$0: Name of the Script
+	$1: First run time parameters
+	$2: Second run time parameter
+	./disk_space.sh env-1 env-2
+
+	Pipeline Jobs								// Multilple Things
+	Stages in Pipeline
+	Multi Branch Pipeline Jobs
+	
+	Basic Groovy Script
+	Utilize Groovy in Jenkins Jobs
+
+	Pipeline Syntax:
+		Clone the spaces
+		Clone the project
+		Versioning the project
+		Build the project
+		Docker Images
+		Docker create services
+	How to clean the Pipeline Jobs
+

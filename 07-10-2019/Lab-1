@@ -1,0 +1,26 @@
+Till here we have completed our Lab SetUp for Jenkins Jobs Execution.
+
+Jenkins Wiki:
+https://en.wikipedia.org/wiki/Jenkins_(software)
+
+Through Jenkins We will create 3 types of Projects:
+
+CI: Continuous Integration
+	It’s a part of both Continuous Delivery & Continuous Deployment, involves the testing and building of any new or updated source code.
+	
+CD: Continuous Delivery
+	Involves a manual trigger to Production
+
+CD: Continuous Deployment
+	Involves an Automatic Release to Production
+
+Note:
+Non-Production environment:
+	System Test Servers
+	Performance Server
+	…..
+
+Production Environment:
+	100+
+	…
+
