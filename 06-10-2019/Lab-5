@@ -1,0 +1,43 @@
+Install Java & Jenkins:
+
+https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/
+
+// Follow the steps present in above link for Jenkins Installation:
+
+// Import the GPG keys of the Jenkins repository using the following wget command:
+	$ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -	// OK
+
+// Next, add the Jenkins repository to the system with:
+	$ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'	// No output
+
+// Update ubuntu:
+	$ sudo apt update
+	OR
+	$ sudo apt-get update
+
+// Finally Install Jenkins:
+	$ sudo apt install jenkins	// Press “Y” to proceed 
+	// Wait for few seconds 
+	// Till here Jenkins Installed 
+
+// How to verify the Jenkins Service Status:
+	$ sudo service jenkins status
+	OR
+	$ sudo systemctl status jenkins
+
+// Start Stop the Jenkins:
+	$ sudo service jenkins status
+	$ sudo service jenkins stop
+	$ sudo service jenkins status
+	$ sudo service jenkins start
+
+// Till here we have Installed jenkins successfully
+
+// Now adjust the firewall:
+	$ sudo ufw allow 8080
+Rules updated
+Rules updated (v6)
+	$ sudo ufw status		// it should be active; Refer to Lab-4 for troubleshoot
+Status: inactive
+
+// Finally we opened the Firewall after referring Lab-4

@@ -1,0 +1,60 @@
+Install Maven: 
+
+https://sharadchhetri.com/2018/12/25/install-setup-maven-linux-jenkins/
+
+
+Steps to install maven:
+
+Visit: https://maven.apache.org/download.cgi		// always choose the latest
+
+Search for “Binary tar.gz archive”: “apache-maven-3.6.2-bin.tar.gz”	// right click and copy the link
+
+// Cross verification before installation:
+$ mvn -v
+The program 'mvn' is currently not installed. You can install it by typing:
+sudo apt install maven
+
+// Install Maven:
+
+// Download Apache Maven
+$ wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz
+
+// List the tar file; successfully downloaded
+$ ls -l
+total 8932
+-rw-rw-r-- 1 ubuntu ubuntu 9142315 Sep  2 21:43 apache-maven-3.6.2-bin.tar.gz
+
+// Create Maven installation directory
+$ sudo mkdir -p /opt/maven
+$ ls -l /opt/maven/
+total 0
+
+// Extract the downloaded Maven binary file
+$ sudo tar -xvzf apache-maven-3.6.2-bin.tar.gz -C /opt/maven/ --strip-components=1
+$ ls -l /opt/maven/
+total 40
+-rw-rw-r-- 1 ubuntu ubuntu 12846 Aug 27 15:09 LICENSE
+-rw-rw-r-- 1 ubuntu ubuntu   182 Aug 27 15:09 NOTICE
+-rw-rw-r-- 1 ubuntu ubuntu  2533 Aug 27 15:01 README.txt
+drwxr-xr-x 2 root   root    4096 Oct  6 14:05 bin
+drwxr-xr-x 2 root   root    4096 Oct  6 14:05 boot
+drwxrwxr-x 3 ubuntu ubuntu  4096 Aug 27 15:01 conf
+drwxrwxr-x 4 ubuntu ubuntu  4096 Oct  6 14:05 lib
+
+// Create symlink to make mvn command available to all users
+$ sudo ln -s /opt/maven/bin/mvn /usr/bin/mvn
+
+// Cross verify the Maven Version:
+
+$ which mvn 
+/usr/bin/mvn
+$ mvn -v
+Apache Maven 3.6.2 (40f52333136460af0dc0d7232c0dc0bcf0d9e117; 2019-08-27T15:06:16Z)
+Maven home: /opt/maven
+Java version: 1.8.0_222, vendor: Private Build, runtime: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "4.4.0-1092-aws", arch: "amd64", family: "unix"
+
+// Till here we have installed Maven & Java
+
+

@@ -1,0 +1,28 @@
+Pre-Requisites to Install Jenkins: “java, maven, git” 
+
+Install Java: 
+
+https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/
+
+Steps to install jdk:
+
+$ sudo apt update
+
+$ java -version
+The program 'java' can be found in the following packages:
+ * default-jre
+ * gcj-5-jre-headless
+ * openjdk-8-jre-headless
+ * gcj-4.8-jre-headless
+ * gcj-4.9-jre-headless
+ * openjdk-9-jre-headless
+Try: sudo apt install <selected package>
+
+$ sudo apt install openjdk-8-jdk
+
+$ java -version
+openjdk version "1.8.0_222"
+OpenJDK Runtime Environment (build 1.8.0_222-8u222-b10-1ubuntu1~16.04.1-b10)
+OpenJDK 64-Bit Server VM (build 25.222-b10, mixed mode)
+
+// Till here we have installed java on ubuntu machine

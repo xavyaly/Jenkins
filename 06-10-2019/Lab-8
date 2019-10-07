@@ -1,0 +1,40 @@
+Note: In AWS EC2 Git installed by default
+
+
+Install GIT:
+
+http://trimc-devops.blogspot.com/2014/12/git-installation-on-ubuntu.html
+
+
+// Steps to Install git:
+
+How to see the git version:
+
+$ git --version		// It’s already installed
+git version 2.7.4
+
+$ sudo apt-get install git 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+git is already the newest version (1:2.7.4-0ubuntu1.6).
+0 upgraded, 0 newly installed, 0 to remove and 14 not upgraded.
+
+// Setting your Username and Email
+	$ git config --global user.name “devopstrainer”
+	$ git config user.name
+	devopstrainer
+	$ git config --global user.email "devopstrainer10@gmail.com"
+	$ git config user.email
+	devopstrainer10@gmail.com
+	
+// Clone a repository:
+	$ mkdir GitLabs
+	$ cd GitLabs
+	$ git init
+	$ git clone https://github.com/xavyaly/Git.git
+	$ cd Git
+	$ ls -l
+	// List out all source from remote
+
+// Till here we have installed Java, Maven, Jenkins & Git	

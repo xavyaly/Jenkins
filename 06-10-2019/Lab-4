@@ -1,0 +1,43 @@
+Allow/Deny UFW Rules after jenkins Installation:
+
+Normal Process: https://linoxide.com/firewall/guide-ufw-firewall-ubuntu-16-10/
+
+Steps to enable: https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-16-04
+
+// Issues faced to make active:
+
+$ sudo ufw allow 8080
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+$ sudo ufw status
+Status: inactive
+
+// Troubleshoot:
+
+$ sudo ufw allow OpenSSH
+Rules updated
+Rules updated (v6)
+$ sudo ufw status
+ERROR: You need to be root to run this script
+$ sudo ufw status
+Status: inactive
+$ sudo ufw enable
+Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
+Firewall is active and enabled on system startup
+$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+8080                       ALLOW       Anywhere                  
+22                         ALLOW       Anywhere                  
+80                         ALLOW       Anywhere                  
+443                        ALLOW       Anywhere                  
+OpenSSH                    ALLOW       Anywhere                  
+8080 (v6)                  ALLOW       Anywhere (v6)             
+22 (v6)                    ALLOW       Anywhere (v6)             
+80 (v6)                    ALLOW       Anywhere (v6)             
+443 (v6)                   ALLOW       Anywhere (v6)             
+OpenSSH (v6)               ALLOW       Anywhere (v6)             
+
+$ 
