@@ -1,0 +1,59 @@
+Link to connect to jenkins: http://<PUBLIC-IP>:8080/
+Enter the credentials: devopstrainer/******
+
+RED: Jenkins Jobs Failed
+BLUE: Jenkins Jobs Passed/SUCCESS
+
+KINDS OF JENKINS JOBS:
+	FreeStyle Project:				// Manual triggered by us or developer
+		Click on “create new jobs” OR Click on “New Item”
+		Enter an item name as: Devops-lab-1-test
+		Select a “Freestyle project”
+		Click “OK”
+		Click on Build -> Execute shell
+			Given any shell script commands
+		Click on “Save”
+		Click on “Build Now” at left 
+		Click on “Console Output” to view the results or logs
+	
+	Configure the same project:
+		Click on project
+		Click on “Configure”
+		Click on Build -> Execute shell
+			echo "Hello World"
+			echo "Hello Worldsss"
+			echo "Hello World-1"
+			echo "Hello World-2222"
+		Click on “Console Output” to view the results or logs		
+		
+	Copy a Job from the existing one:
+		Click on New Item
+		Enter an item name: devops-lab-2-copyjob
+		Copy from: devops-lab-1-test
+		Execute on shell -> command: 
+			echo "Hello World"
+			echo "Hello this is a copy Job"
+		Click on Save
+		Click on Build Now
+		SUCEESS/FAILURE
+
+	Note:
+	Master/Nodes would be only on in Jenkins by default where we have installed the Jenkins
+	Slaves/Nodes would be multiple, Even though we can force any specific to execute in specific slaves
+	
+	How to Install/Unstall a Plugin:
+		Click on Manage Jenkins
+		Click on Manage Plugins
+		Search for Green balls
+		Select the checkbox
+		Choose Install with our restart
+		
+	
+	How to restart the jenkins:
+		http://<PUBLIC-IP>:8080/restart
+		Are you sure you want to restart Jenkins? Yes
+		OR
+		sudo service jenkins status
+		sudo service jenkins stop
+		sudo service jenkins start
+		sudo service jenkins status
