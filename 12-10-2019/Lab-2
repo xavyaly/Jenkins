@@ -1,0 +1,19 @@
+In Mac:
+
+Install Java on MacOs:		// Steps already mentioned in previous lecture
+Install Maven on MacOs:	// Steps already mentioned in previous lecture
+Install Git on MacOs:		// Steps already mentioned in previous lecture
+Install Jenkins In Mac:		// Follow the Link
+https://www.macminivault.com/installing-jenkins-on-macos/	// Follow the instruction to install jenkins in Mac
+https://www.youtube.com/watch?v=Y1lZmIV63wM				// Video to help to install
+
+How to restart Jenkins:
+UI: http://localhost:8080/restart
+OR
+CLI: $ sudo system jenkins restart
+
+Note:
+Linux		// yum or rpm used to install any packages
+Ubuntu		// apt-get or apt
+Mac			// pip; brew
+

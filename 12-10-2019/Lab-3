@@ -1,0 +1,8 @@
+crontab: used to scheduled some automation jobs
+
+Read the below Article regarding crontab:
+https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/
+
+Example:
+15 0 * * * root <path-of-script.php> -S > /dev/null 2>&1
+

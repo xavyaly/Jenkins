@@ -1,0 +1,31 @@
+Why fork is required ? 
+To avoid the below issue fork is required
+
+In general:
+$ git clone <https-url>		// https://github.com/wakaleo/game-of-life.git
+$ git status
+$ git add .
+$ git commit -m “<useful-comment>”
+$ git branch
+$ git push	// Error
+remote: Permission to wakaleo/game-of-life.git denied to xavyaly.
+fatal: unable to access 'https://github.com/wakaleo/game-of-life.git/': The requested URL returned error: 403
+
+Definition:
+Fork a repo. A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.
+
+Why push is required ?
+During Jenkins job configuration you need to provide a GIT URL 
+
+How to do fork ?
+Go to the browser -> Click on fork -> copy the clone URL -> Start cloning now
+
+To avoid Error we used Fork Concept:
+// Click on Fork				
+$ git clone <https-url> 			// https://github.com/wakaleo/game-of-life.git
+$ git status
+$ git add game-of-life
+$ git commit -m “<useful-comment>”
+$ git branch
+$ git push						// I hope no error came
+// It will upload your current local repo into remote; Verify it in browser

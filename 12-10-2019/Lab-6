@@ -1,0 +1,17 @@
+POLL SCM 
+
+Difference between Build Triggered and Poll SCM Jobs ?
+Build Triggered: It executes the specific job as per your configurations 
+Poll SCM: It executes only if some commits happens 
+
+Definition:
+Poll SCM periodically polls the SCM to check whether changes were made (i.e. new commits) and builds the project if new commits where pushed since the last build, whereas build periodically builds the project periodically even if nothing has changed.
+
+Click on New Items
+	Enter an item name: devops-lab-3-buildtriggered
+	Select the free style jobs
+	Click on Ok
+	Build Triggers -> Poll SCM -> Schedule -> */1 * * * * 
+	Build -> Execute shell -> uptime
+	Click on Save
+

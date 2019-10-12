@@ -1,0 +1,60 @@
+Lab-1:
+
+Refer to “AWS-Lab”
+
+Follow the below steps for Jenkins Installation:
+
+Install Jenkins Through Download the war File In all OS:
+
+Install the Jenkins: https://jenkins.io/ 
+	Click on Download
+	Download the Jenkins as per specific OS
+
+$ cd <pwd-of-jenkins>		# Place where you have downloaded the jenkins.war file
+
+$ java -jar jenkins.war		# Start the Jenkins
+
+Go To browser and Hit:
+# http://localhost:8080	# Hit in Browser to access the Jenkins
+
+$ cat /Users/<id>/.jenkins/secrets/initialAdminPassword	 	# Copy the Password
+
+# Click on Continue
+
+# Click on Installed Suggested Plugin
+
+# Automatically 20 Default Plugins will be installed		# wait for 10 mins
+	# Folders 
+	# OWASP Markup Formatter 
+	# Build Timeout 
+	# Credentials Binding 
+	# Timestamper 
+	# Workspace Cleanup 
+	# Ant 
+	# Gradle 
+	# Pipeline 
+	# GitHub Branch Source 
+	# Pipeline: GitHub Groovy Libraries 
+	# Pipeline: Stage View 
+	# Git 
+	# Subversion 
+	# SSH Slaves 
+	# Matrix Authorization Strategy 
+	# PAM Authentication 
+	# LDAP Email Extension 
+	# Mailer
+
+# Create first Admin User:
+	Username			# Mandatory
+	password			# Mandatory
+	confirm password
+	Full name
+	Email Add:
+
+# Click on Save And Finish
+
+# Start using Jenkins
+
+Note For Knowledge Purpose:
+# CREATE A “.jenkins”		# jenkins database, never delete unless you want completely uninstall the jenkins
+$ rm -rf .jenkins			# Make Sure, Cross Check because it will completely remove the Jenkins from your System

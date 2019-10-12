@@ -1,0 +1,54 @@
+Manual execution of game-of-life ?
+
+We will try to create a *.jar file inside the target folder.
+
+Steps:
+	In ubuntu machine:
+		$ mkdir GitLabs
+		$ cd GitLabs
+		$ git init				// initialise the git
+		$ git clone https://github.com/wakaleo/game-of-life.git	// from browser
+		$ ls -l game-of-life/
+total 52
+-rw-rw-r-- 1 ubuntu ubuntu  3093 Oct 12 06:04 README.markdown
+drwxrwxr-x 3 ubuntu ubuntu  4096 Oct 12 06:04 gameoflife-acceptance-tests
+drwxrwxr-x 3 ubuntu ubuntu  4096 Oct 12 06:04 gameoflife-build
+drwxrwxr-x 7 ubuntu ubuntu  4096 Oct 12 06:04 gameoflife-core
+drwxrwxr-x 2 ubuntu ubuntu  4096 Oct 12 06:04 gameoflife-deploy
+drwxrwxr-x 4 ubuntu ubuntu  4096 Oct 12 06:04 gameoflife-web
+-rw-rw-r-- 1 ubuntu ubuntu    50 Oct 12 06:04 infinitest.filters
+-rw-rw-r-- 1 ubuntu ubuntu 22300 Oct 12 06:04 pom.xml
+
+What is pom.xml ?
+POM is an acronym for Project Object Model. The pom.xml file contains information of project and configuration information for the maven to build the project such as dependencies, build directory, source directory, test source directory, plugin, goals etc. Maven reads the pom.xml file, then executes the goal.
+
+Example of pom.xml ?
+$ ls -l pom.xml 
+-rw-rw-r-- 1 ubuntu ubuntu 22300 Oct 12 06:04 pom.xml
+$ pwd
+/home/ubuntu/GitLabs/game-of-life
+
+Now Lets compile the project:
+$ ls -l
+total 52
+-rw-rw-r-- 1 ubuntu ubuntu  3093 Oct 12 06:04 README.markdown
+drwxrwxr-x 3 ubuntu ubuntu  4096 Oct 12 06:04 gameoflife-acceptance-tests
+drwxrwxr-x 3 ubuntu ubuntu  4096 Oct 12 06:04 gameoflife-build
+drwxrwxr-x 7 ubuntu ubuntu  4096 Oct 12 06:04 gameoflife-core
+drwxrwxr-x 2 ubuntu ubuntu  4096 Oct 12 06:04 gameoflife-deploy
+drwxrwxr-x 4 ubuntu ubuntu  4096 Oct 12 06:04 gameoflife-web
+-rw-rw-r-- 1 ubuntu ubuntu    50 Oct 12 06:04 infinitest.filters
+-rw-rw-r-- 1 ubuntu ubuntu 22300 Oct 12 06:04 pom.xml
+$ pwd
+/home/ubuntu/GitLabs/game-of-life
+$ cd gameoflife-build/
+$ ls -l
+total 8
+-rw-rw-r-- 1 ubuntu ubuntu  549 Oct 12 06:04 pom.xml
+drwxrwxr-x 3 ubuntu ubuntu 4096 Oct 12 06:04 src
+$ ls -l
+total 12
+$ mvn compile package 									// compile the package
+-rw-rw-r-- 1 ubuntu ubuntu  549 Oct 12 06:04 pom.xml
+drwxrwxr-x 3 ubuntu ubuntu 4096 Oct 12 06:04 src
+drwxrwxr-x 5 ubuntu ubuntu 4096 Oct 12 06:14 target			// target folder created

@@ -1,0 +1,12 @@
+Create a build triggered Job in Jenkins:
+
+	Click on New Items
+	Enter an item name: devops-lab-3-buildtriggered
+	Select the free style jobs
+	Click on Ok
+	Build Triggers -> Build periodically -> Schedule -> */1 * * * * 
+	Build -> Execute shell -> uptime
+	Click on Save
+	
+Note:
+Keep on checking the job after every 1 min
