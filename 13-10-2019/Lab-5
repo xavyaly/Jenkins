@@ -1,0 +1,7 @@
+Global Security
+
+	// Click on jenkins
+	// Click on Manage jenkins
+	// Click on Configure Global Security
+	// Matrix-based security: Important; DevOps OR Admin can give the access as per the project requirement to specific user or DL
+

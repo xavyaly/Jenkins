@@ -1,0 +1,21 @@
+How to clone a project from Jenkins	: IMPORTANT
+
+	// Click on new Item: Populate the Jenkins-Job-Name
+	// Come to Source Code Management
+		// Git -> Repositories 
+				Repository URL
+				Credentials
+	// Branches to build 
+		// Branch Specifier (blank for 'any')
+			// */master
+
+How to cross Verify ?
+	$ sudo su - jenkins
+	$ cd /var/lib/jenkins/workspace/<JOB_NAME>
+	$ ls -l
+
+Go to browser and cross verify the source present in GIT
+
+Note:
+After Jenkins installation a default user called as “jenkins” will be created
+

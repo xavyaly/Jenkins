@@ -1,0 +1,11 @@
+Sample “Hello World” program through Pipeline
+
+	Click on New Item
+	Enter an item name: devops-lab-10-simplehelloworldpipeline
+	Select Pipeline
+	Click on OK
+	Go to Pipleline -> Definition -> Pipeline script -> 
+		text box and add:
+		echo "hello world!!!"
+	Click on Save
+

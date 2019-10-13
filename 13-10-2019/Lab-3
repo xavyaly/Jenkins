@@ -1,0 +1,10 @@
+How to add the multiple repositories in Jenkins ?
+
+	// Click on New Item and create a Jenkins Jobs
+	// Come to Source Code Management
+		// Git -> Repositories 
+				Repository URL
+				Credentials
+		 For more than one repository:
+		// Click on Add Repository and follow the above lines
+

@@ -1,0 +1,31 @@
+Generate Key-Pair and Add in GitHub:
+
+Create a GitHub account
+
+Configure SSH Keys:
+GitHub uses SSH keys to establish a secure connection between our computer and the GitHub servers.
+SSH keys are a way to identify trusted computers, without involving passwords. The steps in the link below will walk us through generating an SSH key and then adding the public key to our GitHub account.
+
+https://help.github.com/en/articles/connecting-to-github-with-ssh
+
+SetUp
+
+$ ssh-keygen -t rsa -C "devopstrainer10@gmail.com"
+OR
+$ ssh-keygen
+
+Then copy the public key file (~/.ssh/id_rsa.pub) and paste it onto the 'key" field of Github as described below:
+	$ cat ~/.ssh/id_rsa.pub
+
+Now that we have the public key copied, it's time to add it to GitHub:
+
+1. In the top right corner of any page, click 'Settings' icon.
+2. In the user settings sidebar, click 'SSH keys'.
+3. Click 'New SSH key'.
+4. In the Title field, add a descriptive label for the new key.
+5. Paste our key into the "Key" field.
+6. Click 'Add key'.
+7. Confirm the action by entering our GitHub password.
+
+$ ssh -T git@github.com
+You've successfully authenticated, but GitHub does not provide shell access.

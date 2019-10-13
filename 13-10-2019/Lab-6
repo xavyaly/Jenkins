@@ -1,0 +1,11 @@
+Install Disk Usage Plugin:
+	Click on Manage Plugins
+	Go to Available
+	Search the “disk-usage” plugin
+	Click on “Install without restart”
+	
+How to cross verify ?
+	Go to jenkins home page
+	You can view “ Disk Usage”
+	You can view the space 
+

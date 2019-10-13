@@ -1,0 +1,10 @@
+Why it is required ? 
+Whenever you want clone the project, you need to pass the GitHub credentials
+
+Steps to add the Global Credentials
+	// Credentials
+	// System
+	// Click on “Global Credentials”
+	// Populate the fields:
+		// Username: XYZ
+		// Password: XYZ
