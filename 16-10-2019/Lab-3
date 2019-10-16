@@ -1,0 +1,6 @@
+How to “Wipe Out Current Workspace”
+	Go to any jenkins jobs
+	Click on Workspace						// at least one build should executed
+	Click on Wipe Out Current Workspace
+	Are you sure about wiping out the workspace?	// pop up appears
+	Click on Ok

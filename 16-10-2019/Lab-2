@@ -1,0 +1,60 @@
+Maven Jenkins jobs with Maven and Java path hardcoded 
+
+
+Follow the same job
+
+Maven Jenkins jobs with Maven and Java install automatically
+	// Click on New Item: devops-lab-1-maven-basic-project
+	// Discard old builds
+		// Days to keep builds: 1
+		// Max # of builds to keep: 5
+	// Source Code Management
+		// Git -> Repositories 
+			// Repository URL: https://github.com/xavyaly/game-of-life.git
+			// Credentials: git-own-password
+		// Git -> Branches to build
+			// Branch Specifier (blank for 'any’): */master
+	// Pre Steps
+		// Execute Shell
+			// Command: echo "Build a Maven Project......"
+	// Build
+		// Root POM: gameoflife-build/pom.xml
+		// Goals and options: compile package
+	// Post Steps:
+		// Execute Shell
+			// Command: echo "Maven Project build successfull......"
+
+	// Click on Save
+	
+
+Note:
+How did you get this:
+$ mvn -v
+Apache Maven 3.6.2 (40f52333136460af0dc0d7232c0dc0bcf0d9e117; 2019-08-27T15:06:16Z)
+Maven home: /opt/maven
+Java version: 1.8.0_222, vendor: Private Build, runtime: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.4.0-1095-aws", arch: "amd64", family: "unix"
+
+Populate all the required fields as per above:
+ Jenkins -> Manage Jenkins ->. Global Tool Configurations -> JDK -> JDK installations -> JDK:
+	Name: Java Path
+	JAVA_HOME: /usr/lib/jvm/java-8-openjdk-amd64/
+	// Unselect “Install automatically”
+
+Jenkins -> Manage Jenkins ->. Global Tool Configurations -> Maven -> Maven installations -> Maven
+	Name: Maven Path
+	MAVEN_HOME: /opt/maven
+	// Un select Install automatically
+
+Click on Save 
+Execute the maven job
+Jenkins Job Build Successfully without any issues
+
+How to cross verify in Local:
+$ pwd
+/var/lib/jenkins/workspace/devops-lab-1-maven-basic-project/gameoflife-build/target
+$ ls -l gameoflife-build-1.0-SNAPSHOT.jar
+-rw-r--r-- 1 jenkins jenkins 5935 Oct 16 14:29 gameoflife-build-1.0-SNAPSHOT.jar
+
+Till here our *.jar file has been created successfully

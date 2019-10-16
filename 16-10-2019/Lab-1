@@ -1,0 +1,42 @@
+Git + Jenkins + Maven
+
+Maven Jenkins jobs with Maven and Java install automatically
+
+	// Click on New Item: devops-lab-1-maven-basic-project
+	// Discard old builds
+		// Days to keep builds: 1
+		// Max # of builds to keep: 5
+	// Source Code Management
+		// Git -> Repositories 
+			// Repository URL: https://github.com/xavyaly/game-of-life.git
+			// Credentials: git-own-password
+		// Git -> Branches to build
+			// Branch Specifier (blank for 'any’): */master
+	// Pre Steps
+		// Execute Shell
+			// Command: echo "Build a Maven Project......"
+	// Build
+		// Root POM: gameoflife-build/pom.xml
+		// Goals and options: compile package
+	// Post Steps:
+		// Execute Shell
+			// Command: echo "Maven Project build successfull......"
+
+	// Click on Save
+	
+
+Now: Jenkins -> Manage Jenkins ->. Global Tool Configurations -> JDK -> JDK installations -> Name: java; Select the checkbox: Install automatically
+Jenkins -> Manage Jenkins ->. Global Tool Configurations -> Maven -> Maven installations -> Name: maven; Select the checkbox: Install automatically
+
+Click on Save 
+Execute the maven job
+
+Note: Job got failed
+Unable to auto-install JDK until the license is accepted.
+ERROR: Failed to parse POMs
+java.io.IOException: Cannot run program "/var/lib/jenkins/tools/hudson.model.JDK/java/bin/java" (in directory "/var/lib/jenkins/workspace/devops-lab-1-maven-basic-project/gameoflife-build"): error=2, No such file or directory
+Finished: FAILURE
+
+How we can fix the issues:
+Lets see in Lab-2:
+
