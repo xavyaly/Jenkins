@@ -1,0 +1,111 @@
+Clone the wakaleo project:
+
+// default code given by jenkins:
+
+node {
+   def mvnHome
+   stage('Preparation') { // for display purposes
+      // Get some code from a GitHub repository
+      git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+      // Get the Maven tool.
+      // ** NOTE: This 'M3' Maven tool must be configured
+      // **       in the global configuration.           
+      mvnHome = tool 'M3'
+   }
+   stage('Build') {
+      // Run the maven build
+      withEnv(["MVN_HOME=$mvnHome"]) {
+         if (isUnix()) {
+            sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
+         } else {
+            bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
+         }
+      }
+   }
+   stage('Results') {
+      junit '**/target/surefire-reports/TEST-*.xml'
+      archiveArtifacts 'target/*.jar'
+   }
+}
+
+
+// Clone the project:
+
+New Item: devops-lab-14-clone-wakaleo-project
+Select Pipeline
+Click on OK
+	Pipeline -> Definition -> Pipeline Script
+	Script
+Sample Step: Git
+Repository URL: https://github.com/xavyaly/game-of-life.git
+Branch: master
+Credentials: <GitHub-credentials>
+Click on “Generate Pipeline Script”
+
+node() {
+    cleanWs()
+    
+    stage('Clone the project'){
+        checkout([$class: 'GitSCM', branches: [[name: ‘*/master’]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'e75ab22c-b0dc-4096-8d46-55c42aff0535', url: 'https://github.com/xavyaly/game-of-life.git']]])
+        
+    }
+}   // End of node
+
+Click on Save
+Click on Build
+
+Clone Successful
+
+// How to verify
+$ pwd
+/var/lib/jenkins/workspace/devops-lab-14-clone-wakaleo-project
+$ ls -l
+total 52
+drwxr-xr-x 3 jenkins jenkins  4096 Oct 18 14:28 gameoflife-acceptance-tests
+drwxr-xr-x 3 jenkins jenkins  4096 Oct 18 14:28 gameoflife-build
+drwxr-xr-x 7 jenkins jenkins  4096 Oct 18 14:28 gameoflife-core
+drwxr-xr-x 2 jenkins jenkins  4096 Oct 18 14:28 gameoflife-deploy
+drwxr-xr-x 4 jenkins jenkins  4096 Oct 18 14:28 gameoflife-web
+-rw-r--r-- 1 jenkins jenkins    50 Oct 18 14:28 infinitest.filters
+-rw-r--r-- 1 jenkins jenkins 22300 Oct 18 14:28 pom.xml
+-rw-r--r-- 1 jenkins jenkins  3093 Oct 18 14:28 README.markdown
+
+
+// Now I want to build same clone project
+
+Sample Step: sh: Shell Script
+Shell Script: mvn compile install -U -f gameoflife-build/pom.xml
+Click on “Generate Pipeline Script”
+sh label: '', script: 'mvn compile install -U -f gameoflife-build/pom.xml'
+
+Click on Save
+Click on Build
+
+
+Complete Code for Clone and Build:
+
+node() {
+    cleanWs()
+    
+    stage('Clone the project'){
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'e75ab22c-b0dc-4096-8d46-55c42aff0535', url: 'https://github.com/xavyaly/game-of-life.git']]])
+    }   // End of stage 1
+    
+    stage('Build the project'){
+        sh label: '', script: 'mvn compile install -U -f gameoflife-build/pom.xml'
+    }   // End of stage 2
+    
+}   // End of node
+
+Click on Save
+Click on Build
+
+View the Pipeline Job Process and check the logs as well 
+
+// How to cross verify:
+
+$ pwd
+/var/lib/jenkins/workspace/devops-lab-14-clone-wakaleo-project/gameoflife-build/target
+$ ls -l gameoflife-build-1.0-SNAPSHOT.jar 
+-rw-r--r-- 1 jenkins jenkins 5935 Oct 18 14:34 gameoflife-build-1.0-SNAPSHOT.jar
+

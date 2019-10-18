@@ -1,0 +1,10 @@
+Why Pipeline is required ?? 
+Important Points of Pipeline:
+
+Pipeline basically needs a basic understanding of groovy language
+In General jenkins Jobs, Plugins required but in Pipeline no need to install multiple plugins for execution
+In Normal jenkins jobs, error tracing is quite time taking and challenging part but in Pipeline error tracing is quite simple
+In Pipeline we split the code into stages which helps us to trace the code errors easily
+In Pipeline maintaining the code is easy
+Etc… other than that we have so many points so try to do google // Important for Interview perspectives
+

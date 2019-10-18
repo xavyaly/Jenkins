@@ -1,0 +1,71 @@
+Till here we have executed on “hello world”
+
+Basic Pipeline:
+	Net Items: devops-lab-13-basic-pipeline
+	Select Pipeline
+	Click OK
+	Pipeline -> Definition -> Pipeline Script
+	Script
+		node {
+			echo 'Hello World'
+			}	
+	
+// Do some Changes:
+
+Click on Pipeline Syntax
+Sample Step -> sh Shell Script -> Shell Script -> ls -lart
+Click on “Generate Pipeline Script”
+Copy it: “sh label: '', script: 'ls -lart'”
+
+Sample:
+node {
+   echo 'Hello World'
+   sh label: '', script: 'ls -lart'
+}
+
+// Multiple Stages:
+
+pipeline {
+    agent any
+    stages {
+        stage('Build-1') {
+            steps {
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
+            }
+        }
+        stage('Build-2') {
+            steps {
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
+            }
+        }
+        stage('Build-3') {
+            steps {
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
+            }
+        }
+        stage('Build-4') {
+            steps {
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
+            }
+        }
+    }
+}
+
+Click OK
+Click On Build Now
