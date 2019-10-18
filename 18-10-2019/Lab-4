@@ -88,7 +88,7 @@ node() {
     cleanWs()
     
     stage('Clone the project'){
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'e75ab22c-b0dc-4096-8d46-55c42aff0535', url: 'https://github.com/xavyaly/game-of-life.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: ‘<password>’, url: 'https://github.com/xavyaly/game-of-life.git']]])
     }   // End of stage 1
     
     stage('Build the project'){
@@ -108,4 +108,3 @@ $ pwd
 /var/lib/jenkins/workspace/devops-lab-14-clone-wakaleo-project/gameoflife-build/target
 $ ls -l gameoflife-build-1.0-SNAPSHOT.jar 
 -rw-r--r-- 1 jenkins jenkins 5935 Oct 18 14:34 gameoflife-build-1.0-SNAPSHOT.jar
-
