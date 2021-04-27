@@ -6,3 +6,11 @@ https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses
 Example:
 15 0 * * * root <path-of-script.php> -S > /dev/null 2>&1
 
+Explanations:
+1: Minute (0-59)
+2: Hours (0-23)
+3: Day (0-31)
+4: Month (0-12 [12 == December])
+5: Day of the week(0-7 [7 or 0 == sunday])
+/path/to/command – Script or command name to schedule
+
