@@ -1,6 +1,90 @@
 Different types of plugins:
 
 https://caylent.com/jenkins-plugins
+
+How many Jenkins Plugins are there?
+The 1,700+ plugins encompass source code management, administration, platforms, UI/UX, building management, and much more. With the vast number of plugins available, you can select to deploy any number of them to enhance productivity, but here are some of the top ones that we suggest using.
+
+Productivity
+1. Dashboard View Plugin
+The ‘Dashboard view plugin’ provides a new Jenkins dashboard that allows you to monitor the status of all the tasks. Ideally, this also has time tracking capabilities for the duration taken by each job and also shows the entire time execution. These are fundamentals that help you manage Jenkins.
+
+2. View Job Filters Plugin
+The ‘View Job Filters plugin’ is an out-of-the-box method to build different views for all your Jenkins jobs. Whether it’s build status or trends and triggers, with the ‘View Job Filters plugin,’ you will find all these filtering options in addition to many others.
+
+3. Folders Plugin
+The ‘Folders plugin’ is a great method for grouping your Jenkins tasks. This fact this plugin has been downloaded over 120,000 times speaks volumes about its usefulness. Furthermore, organize your CI server can be arranged perfectly with the nestable folders available in this plugin.
+
+Monitoring
+4. Monitoring Plugin
+The ‘Monitoring Plugin’ uses JavaMelody to keep track of Jenkins. This plugin allocates charts for CPU, HTTP response time, memory, and much more. It further provides information on HTTP periods, logs accounts, head dumps, and other data. With this plugin, you can check the status/progress of jobs under consideration and view statistics that will help you proactively manage Jenkins via the interface.
+
+5. Metrics Plugin
+The ‘Metrics Plugin’ provides health checks by exposing the Dropwizard Metrics API to Jenkins for application-level metrics to keep you informed of whats happening in real-time.
+
+Performance Enhancers
+6. Performance Plugin
+Use this plugin in both Jenkins pipelines and GUI jobs. The tool provides report capturing capabilities through a whole range of favorite testing tools like JMeter, JUnit or Taurus. You can watch your project’s performance via trend reports and graphs, and set your build status to either right, unstable or failed.
+
+7. Performance Publisher Plugin
+An outstanding feature of Performance Published plugin is that it is designed to work with every testing tool by generating trend and global reports for test result analysis. It computes stats, underlines regressions and modifications, and creates any number of trend graphs, but you need to generate the XML files with your own testing tool.
+
+Scaling Jenkins Setup
+Setting up Jenkins is straightforward for immediate CI functionality and to run automated tests on its own. But as you run more jobs on your Jenkins server, it will quickly become apparent that one instance is not enough even assuming they might run in parallel to each other. For these occurrences, Jenkins provides the “master/slaves” mode.
+
+There are numerous ways to configure the Jenkins’ master and slaves. The best recommendation is to allocate new slaves’ instances only when they are necessary and to exclude them when it’s not convenient having them.
+
+The next two plugins are great for handling Jenkins server scalability.
+
+8. Kubernetes Plugin
+The ‘Kubernetes plugin’ works, surprisingly, with Kubernetes. So, if you plan to use Kubernetes for your infrastructure, this plugin is the way forward for setting up and tearing down Jenkins’ agents. While moving to Kubernetes is not the easiest process, the results are worth it.
+
+9. Self-Organizing Swarm Modules Plugin
+The decision for using this plugin or the one above lies simply with, are you using Docker Swarm or Kubernetes? This plugin offers just another method to spin up and pull down Jenkins slaves.
+
+10. Amazon ECS Container Service
+Use the ‘Amazon ECS Container Service’ plugin to manage Jenkins cloud slaves and deploy Docker-based applications on a cluster.
+
+11. Azure Container Service
+Your new AKS (rebranding by Azure) cluster orchestration plugin to run a container as an agent through Jenkins.
+
+Tests Analysis Plugins
+Jenkins is the ultimate companion for performing your tests as part of CI. However, Jenkins doesn’t provide any way of studying test results after execution, which is an essential aspect of testing.
+
+12. Test Results Analyzer
+The Test Results plugin is preferable as it offers greater visibility on tests results and execution trend patterns as well as allowing easy installation. The ‘Tests Result Analyzer’ gives many different graphical representations and a quite detailed matrix table that will direct you to the outcome of each test for all the builds you’ve had. A reliable method of identifying unstable tests.
+
+13. Bootstrapped-multi-test-result-report plugin
+The ‘bootstrapped-multi-test-result-report plugin’ enables you to build HTML reports based on tests’ results. A major advantage of this plugin is its ability to make interactive reports that enable you to see the overall picture of all outcomes as well as detailed results of steps statuses.
+
+Pipeline / Flow
+14. Job DSL plugin
+This plugin allows users to describe tasks, handle scripts, and update Jenkins jobs. With Job DSL you can define jobs by bare minimum programmatic form with the help from templates. You also gain various jobs views such as ‘BuildMonitorView’, ‘BuildPipelineView’, ‘CategorizedJobsView’, and many others. These views provide high visibility of the status of selected Jenkins jobs.
+
+15. Build Pipeline Plugin
+This plugin provides a view of the jobs that make up your build pipeline, upstream and also downstream. Furthermore, it allows you to define manual triggers for specific tasks that may need intervention before their execution. Build Pipeline Plugin is a game changer for Jenkins’ users because it makes pipelines scriptable as well as providing an incredibly powerful avenue in which to develop complex DevOps pipelines.
+
+16. Multijob Plugin
+This plugin allows you to express complex tasks and then organize them according to their structures in the Jenkins. You can use this plugin whenever you need to clean up the mess for chain definitions with upstream or downstream jobs. You may also use it when you need to create a hierarchy of tasks to be executed sequentially.
+
+Upon its installation, you can create ‘Multijob’ projects, and also define phases that can hold more than one job in addition to executing jobs in parallel to each other.
+
+17. Pipeline Plugin
+‘Pipeline’ attempts to automate your continuous delivery pipeline and performs other complex tasks in Jenkins using traditional plugins and freestyle projects.
+
+Source Control Management (SCM)
+SCM allows for the referencing of multiple repositories in a Jenkins job.
+
+18. SCM API
+This plugin supplies a next-generation API for interacting with SCM systems including a full-featured event system that allows developers to provide fine-grained alerts to consumers.
+
+19. Git Plugin
+Provides access to GitHub as an SCM which acts as a repository browser for many other providers.
+
+20. GitHub Integration Plugin
+This is the most fundamental plugin needed for integrating Jenkins with GitHub projects.With this plugin, you can schedule your build, pull code and data files from GitHub repositories to Jenkins, and automatically trigger each build as needed.
+
+
 https://devops.com/15-must-jenkins-plugins-increase-productivity/
 https://www.devteam.space/blog/10-best-jenkins-plugins-for-devops/
 https://dev.to/jcoelho/8-jenkins-plugins-i-cant-live-without-3bin
